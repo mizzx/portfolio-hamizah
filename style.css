@@ -185,6 +185,14 @@ nav .fa{
     .nav-links ul{
         padding: 30px;
     }
+    .profile-img img{
+        /* display: block; */
+        max-width: 25%;
+        height: auto;
+        position: absolute;
+        bottom: 0;
+        left: 50px;
+    }
 }
 /* ------------------- */
 
