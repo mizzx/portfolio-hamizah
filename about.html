@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <!-- website responsive based on device screen size -->
+        <meta name="viewport" content="with=device-width, initial-scale=1.0">
+        <title>mizah-about</title>
+        <link rel="stylesheet" href="style.css">
+        <!-- link of font style from google -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+        <!-- link for CDN icon of menu bar small screen -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+
+    <body>
+    <section class="sub-header">
+        <!-- add logo that can click -->
+        <nav class="nav-bar">
+            <!-- <a href="index.html"><img src="images/miz.png"></a> -->
+            <!-- <h1>MY PORTFOLIO</h1> -->
+            <div class="nav-links" id="navLinks"> <!--add javaScript id-->
+                <!-- link for icon of close menu bar small screen  aria-hidden="true"-->
+                <i class="fa fa-times" onclick="hideMenu()"></i> <!--add javaScript onclick-->
+                <ul>
+                    <b><li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="skills.html">SKILLS</a></li>
+                    <li><a href="projects.html">PROJECTS</a></li></b>
+                    <!-- <li><a href="contact.html">CONTACT</a></li></b> -->
+                </ul>
+            </div>
+            <!-- icon menu burger for small screen -->
+            <!-- aria-hidden="true" -->
+            <i class="fa fa-bars" onclick="showMenu()"></i> <!--add javaScript onclick-->
+        </nav>
+        <br>
+        <h1>About Me</h1>
+    </section>
+
+<!------- Content ------->
+
+    <section class="about-me">
+        <div class="col">
+            <div class="about-row">
+                <h1>Ready for Next Career Step</h1>
+                <p>I am actively seeking job opportunities, with a focus on software development, 
+                    data analysis, or in the field of Bioinformatics.</p>
+            </div>
+
+            <div class="about-row">
+                <h1>IT intern</h1>
+                <p>I acquired experience as an IT intern at Original Intelligence Sdn. Bhd., primarily focusing on utilizing 
+                    Visual Basic (VB.NET) and Microsoft SQL Server. This involved working with SQL scripts and stored procedures
+                    to test and improve the Human Resource Management System.</p>
+            </div>
+        
+            <div class="about-row">
+                <h1>Bachelor Degree at Universiti Malaya</h1>
+                <p>I completed my final year project as a Bioinformatics student, which involved the classification of 
+                    chest X-ray images using deep learning and machine learning approaches. The project utilized many Python libraries
+                    and imported pre-trained models. Throughout my study, I gained knowledge in building webpages, and working with various 
+                    programming languages, including Python, MATLAB and R, for data analysis and manipulation.</p>
+            </div>
+        
+            <div class="about-row">
+                <h1>My First Programming Exposure</h1>
+                <p>In 2018, I began my programming journey at Pahang Matriculation College, where
+                    I was introduced to Java as my first language to code projects.</p>
+            </div>
+        
+            <div class="about-row">
+                <h1>Interests</h1>
+                <p>I enjoy engaging in outdoor activities as well as love playing badminton and table tennis. I always strive to maintain 
+                    a balanced lifestyle, ensuring I don't spend too much time on screens and remain active with other activities.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+<!------- Footer ------->
+<section class="footer">
+    <div class="made-with">
+        <i class="fa fa-heart-o"></i> by Hamizah 2024
+    </div>
+    <div class="contact-me">
+        <!-- <div>Contact Me <br> -->
+        <div>
+            <a href="mailto:hamizah.ca@gmail.com" target="_blank" class="fa fa-envelope-o"></a>
+            <a href="https://www.linkedin.com/in/hamizah-azemin/" target="_blank" class="fa fa-linkedin-square"></a>
+            <a href="https://github.com/mizzx" target="_blank" class="fa fa-github"></a>
+        </div>
+    </div>
+</section>
+
+
+<!----- JavaScript---->
+    <script>
+
+//toggle menu on small screen
+        var navLinks = document.getElementById("navLinks");
+
+        function showMenu(){
+            navLinks.style.right = "0"; //set padding style to 0 to show menu
+        }
+        function hideMenu(){
+            navLinks.style.right = "-200px"; //set padding style to -200 to hide menu
+        }
+
+// toProfile
+
+    </script>
+
+    </body>
+
+</html>

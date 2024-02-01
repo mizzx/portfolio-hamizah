@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <!-- website responsive based on device screen size -->
+        <meta name="viewport" content="with=device-width, initial-scale=1.0">
+        <title>mizah-about</title>
+        <link rel="stylesheet" href="style.css">
+        <!-- link of font style from google -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+        <!-- link for CDN icon of menu bar small screen -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+
+    <body>
+    <section class="sub-header">
+        <!-- add logo that can click -->
+        <nav class="nav-bar">
+            <!-- <a href="index.html"><img src="images/miz.png"></a> -->
+            <!-- <h1>MY PORTFOLIO</h1> -->
+            <div class="nav-links" id="navLinks"> <!--add javaScript id-->
+                <!-- link for icon of close menu bar small screen  aria-hidden="true"-->
+                <i class="fa fa-times" onclick="hideMenu()"></i> <!--add javaScript onclick-->
+                <ul>
+                    <b><li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="skills.html">SKILLS</a></li>
+                    <li><a href="projects.html">PROJECTS</a></li></b>
+                    <!-- <li><a href="contact.html">CONTACT</a></li></b> -->
+                </ul>
+            </div>
+            <!-- icon menu burger for small screen -->
+            <!-- aria-hidden="true" -->
+            <i class="fa fa-bars" onclick="showMenu()"></i> <!--add javaScript onclick-->
+        </nav>
+        <br>
+        <h1>Skills</h1>
+    </section>
+
+<!------- Content ------->
+
+<section class="skills" id="id">
+    
+    <h1>Programming Languages</h1>
+
+    <div class="row">
+        <div class="skills-col">
+            <img src="images/python.png">
+            <h3>Python</h3>
+        </div>
+        <div class="skills-col">
+            <img src="images/r.png">
+            <h3>R</h3>
+        </div>
+        <div class="skills-col">
+            <img src="images/matlab.png">
+            <h3>MATLAB</h3>
+        </div>
+        <div class="skills-col">
+            <img src="images/java.png">
+            <h3>Java</h3>
+        </div>
+    </div>
+
+    <h1>Web Development</h1>
+
+    <div class="row">
+        <div class="skills-col">
+            <img src="images/html.png">
+            <h3>HTML</h3>
+        </div>
+        <div class="skills-col">
+            <img src="images/css.png">
+            <h3>CSS</h3>
+        </div>
+        <div class="skills-col">
+            <img src="images/js.png">
+            <h3>JavaScript</h3>
+        </div>
+        <div class="skills-col">
+            <img src="images/net.png">
+            <h3>VB.NET</h3>
+        </div>
+    </div>
+
+    <h1>Data Management & Analysis</h1>
+    <div class="row">
+        <div class="skills-col">
+            <img src="images/sql.png">
+            <h3>SQL</h3>
+        </div>
+        <div class="skills-col">
+            <img src="images/python.png">
+            <h3>Python</h3>
+        </div>
+        <div class="skills-col">
+            <img src="images/r.png">
+            <h3>R</h3>
+        </div>
+        <div class="skills-col">
+            <img src="images/matlab.png">
+            <h3>MATLAB</h3>
+        </div>
+    </div>
+
+    <h1>Tools</h1>
+    <div class="row">
+        <div class="skills-col">
+            <img src="images/mssql.png">
+            <h3>Microsoft SQL Server</h3>
+            <p>Experience in executing and troubleshooting stored procedure</p>
+        </div>
+        <div class="skills-col">
+            <img src="images/vscode.png">
+            <h3>VS Code</h3>
+            <p>Utilized Jupyter Notebook for data exploration and visualization.<br>
+                Develop interactive web pages and application</p>
+        </div>
+        <div class="skills-col">
+            <img src="images/vstudio.png">
+            <h3>Visual Studio</h3>
+            <p>Experiece in VB.NET for web application</p>
+        </div>
+        <div class="skills-col">
+            <img src="images/linux.png">
+            <img src="images/ubuntu.png">
+            <h3>Linux (Ubuntu)</h3>
+            <p>Data manipulation and Bioinformatics analysis</p>
+        </div>
+    </div>
+
+</section>
+
+<!------- Footer ------->
+<section class="footer">
+    <div class="made-with">
+        <i class="fa fa-heart-o"></i> by Hamizah 2024
+    </div>
+    <div class="contact-me">
+        <div>
+            <a href="mailto:hamizah.ca@gmail.com" target="_blank" class="fa fa-envelope-o"></a>
+            <a href="https://www.linkedin.com/in/hamizah-azemin/" target="_blank" class="fa fa-linkedin-square"></a>
+            <a href="https://github.com/mizzx" target="_blank" class="fa fa-github"></a>
+        </div>
+    </div>
+</section>
+
+
+<!----- JavaScript---->
+    <script>
+
+// for toggle menu on small screen
+        var navLinks = document.getElementById("navLinks");
+
+        function showMenu(){
+            navLinks.style.right = "0"; //set padding style to 0 to show menu
+        }
+        function hideMenu(){
+            navLinks.style.right = "-200px"; //set padding style to -200 to hide menu
+        }
+// for toProfile
+
+    </script>
+
+    </body>
+
+</html>

@@ -1,0 +1,493 @@
+/* responsive based on device size */
+*{
+    margin: 0;
+    padding: 0;
+    /* below is font from google */
+    font-family: 'Roboto', sans-serif; 
+} 
+
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(54, 8, 33, 0.3),rgba(30, 4, 24, 0.3)), url(images/background.png);
+    /* background-color: whitesmoke; */
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    
+}
+
+/* items in header */
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+
+/* remove bullet from list of items in header menu*/
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+/* when hover to header items */
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: palevioletred;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+
+.text-box{
+    max-width: 50%;
+    height: auto;
+    color: white;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%); /* center of div */
+    text-align: center;
+    margin-top: 200px;
+    /* display: flex; */
+    /* justify-content: center;
+    align-items: center; */
+}
+.text-box h1{
+    font-size: 80px;
+    font-style: italic;
+    text-shadow: 6px 2px palevioletred;
+    /* cursor: pointer; */
+}
+.text-box h1:hover{
+    /* text-shadow: 6px 2px palevioletred; */
+    font-size: 83px;
+    transition: 0.3s;
+}
+
+.text-box p{
+    font-size: 15px;
+    color: white;
+    /* margin: 10px; */
+}
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    padding: 12px 34px;
+    margin: 30px;
+    font-size: 13px;
+    background: transparent;
+    /* position: relative; */
+    cursor: pointer;
+}
+.hero-btn:hover{
+    border: 1px solid white;
+    background: palevioletred;
+    transition: 0.5s;
+}
+
+/* hide icons for menu on big screen */
+nav .fa{
+    display:none;
+}
+
+.profile-img img{
+    /* display: block; */
+    max-width: 20%;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+    left: 50px;
+}
+
+/* for smaller screen device, put smaller font size */
+/* need to adjust back!! tengok cth code dr arpah */
+@media(max-width: 700px){
+    .text-box{
+        max-width: 50%;
+        height: auto;
+        color: white;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%); /* center of div */
+        text-align: center;
+        margin-top: 300px;
+    }
+    .text-box h1{
+        font-size: 40px;
+        text-shadow: 3px 1px palevioletred;
+    }
+    .text-box h1:hover{
+        font-size: 43px;
+        text-shadow: 3px 1px palevioletred;
+        transition: 0s;
+    }
+    /* menu item for smaller device */
+    .nav-links ul li{
+        display: block;
+    }
+    /* appear at right side of screen */
+    .nav-links{
+        /* position: absolute; */
+        position: fixed;
+        background: palevioletred;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px; /* change from 0 to -200 to hide menu items at first*/
+        text-align: left;
+        z-index: 2;
+        transition: 1s; /* transition when open and close menu */
+    }
+    /* let icon menu appear on small screen */
+    nav .fa-times{
+        display: block;
+        color: white;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+        /* float: right; */
+    }
+    nav .fa-bars{
+        display: block;
+        position: absolute;
+        color: white;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+        top: 10px;
+        right: 10px;
+    }
+    /* space btwn menu items with boarder */
+    .nav-links ul{
+        padding: 30px;
+    }
+}
+/* ------------------- */
+
+@media (max-height: 400px) {
+    .text-box h1{
+        font-size: 40px;
+        text-shadow: 3px 1px palevioletred;
+    }
+    .text-box h1:hover{
+        font-size: 43px;
+        text-shadow: 3px 1px palevioletred;
+        transition: 0s;
+    }
+}
+
+/* -------------------------Profile first page--------------------- */
+
+/* to centre the content of about-me section */
+.profile{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    margin-top: 50px;
+    /* padding-top: 80px;
+    padding-bottom: 80px; */
+}
+h1{
+    font-size: 36px;
+    font-weight: 600;
+    /* margin-top: 50px; */
+}
+p{
+    /* color:white; */
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+
+/* row of profile into three columns, insted of stack to each other */
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+/* box for three columns */
+.profile-col{
+    flex-basis: 31%;
+    background: rgba(247, 209, 216, 0.95);
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s; /*add transition when hover interactive to box */
+}
+/* beautify the three columns */
+h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+/* hover interactive to box */
+.profile-col:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.3);
+}
+/* for smaller screen device put box columns of row stack to each other*/
+@media(max-width: 700px){
+    .row{
+        flex-direction: column;
+    }
+}
+
+/* ------------------------footer----------------------- */
+
+.footer{
+    /* width: 100%; */
+    display: flex;
+    bottom: 0;
+    justify-content: space-between;
+    background-color:palevioletred;
+    align-items: center;
+    padding: 10px;
+    text-align: left;
+    color: white;
+}
+.made-with
+{
+    font-size: 15px;
+    font-weight: 300;
+    margin-left: 10px;
+}
+.contact-me
+{
+    font-size: 23px;
+}
+.contact-me a
+{
+    margin-right: 20px;
+}
+.contact-me a {
+    color: inherit; /* Inherit text color from the parent */
+    text-decoration: none; /* Remove underline */
+    cursor: pointer; /* Show pointer cursor on hover */
+}
+/* --------------------------------About Me page----------------------------- */
+.sub-header{
+    min-height: 30vh;
+    width: 100%; 
+    background-image: linear-gradient(rgba(54, 8, 33, 0.3),rgba(30, 4, 24, 0.3)), url(images/background.png);
+    /* background-color: whitesmoke; */
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    text-align: center;
+    color: white;
+}
+.sub-header h1{
+    margin-top: 20px;
+    padding-bottom: 20px;
+    text-shadow: 3px 1px palevioletred;
+}
+
+.about-me{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    margin-top: 50px;
+}
+.col{
+    text-align: center;
+}
+
+/* box */
+.about-row{
+    flex-basis: 50%;
+    border: 5px solid rgba(247, 209, 216, 0.95);
+    border-radius: 10px;
+    margin: 50px;
+    /* margin-bottom: 0%; */
+    padding: 10px;
+    box-sizing: border-box;
+    transition: 0.5s; /*add transition when hover interactive to box */
+}
+/* beautify the text */
+.about-row h1{
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.about-row p{
+    font-size: 14px;
+    text-align: center;
+    margin: 10px 0;
+}
+
+/* hover interactive effect to box */
+.about-row:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.3);
+}
+
+/* -------------------------------Skills page-----------------------*/
+
+/* to centre the content of skills section */
+.skills{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    margin-top: 50px;
+}
+.skills h1{
+    font-size: 25px;
+    font-weight: 600;
+    /* margin-top: 50px; */
+    /* margin-bottom: ; */
+}
+p{
+    /* color:white; */
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+/* box for three columns */
+.skills-col{
+    flex-basis: 23%;
+    background: rgba(247, 209, 216, 0.95);
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s; /*add transition when hover interactive to box */
+}
+.skills h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+/* skills icon */
+.skills-col img{
+    width: 20%;
+    height: auto;
+}
+/* hover interactive to box */
+.skills-col:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.3);
+}
+/* for smaller screen device put box columns of row stack to each other*/
+@media(max-width: 700px){
+    .row{
+        flex-direction: column;
+    }
+    .skills{
+        width: 60%;
+        margin: auto;
+        text-align: center;
+        margin-top: 50px;
+    }
+    .skills h1{
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 10px;
+    }
+}
+
+/* -----------------------------Projects page-------------------------*/
+
+/* to centre the content of skills section */
+.projects{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    margin-top: 50px;
+    /* padding-top: 30px;
+    padding-bottom: 30px; */
+}
+.projects h1{
+    font-size: 25px;
+    font-weight: 600;
+    /* margin-top: 50px; */
+    /* margin-bottom: ; */
+}
+p{
+    /* color:white; */
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+.projects-col{
+    flex-basis: 45%;
+    background: rgba(247, 209, 216, 0.95);
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s; /*add transition when hover interactive to box */
+}
+h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+/* skills icon */
+.projects-col img{
+    width: 5%;
+    height: auto;
+    /* filter: grayscale(100%); */
+    /* padding-bottom: 12px; */
+}
+/* hover interactive to box */
+.projects-col:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.3);
+}
+.projects-col a {
+    color: inherit; /* Inherit text color from the parent */
+    text-decoration: none; /* Remove underline */
+    cursor: pointer; /* Show pointer cursor on hover */
+}
+
+.projects-col a:hover {
+    text-decoration: underline; /* Add underline on hover if needed */
+}
+/* for smaller screen device put box columns of row stack to each other*/
+@media(max-width: 700px){
+    .row{
+        flex-direction: column;
+    }
+    .projects h1{
+            font-size: 20px;
+            font-weight: 600;
+            margin-top: 10px;
+    }
+}
