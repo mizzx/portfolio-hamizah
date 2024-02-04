@@ -327,7 +327,7 @@ h3{
 
 /* box */
 .about-row{
-    flex-basis: 45%;
+    flex-basis: 55%;
     border: 5px solid rgba(247, 209, 216, 0.95);
     border-radius: 10px;
     margin: 50px;
