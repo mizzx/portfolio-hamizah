@@ -330,7 +330,7 @@ h3{
     flex-basis: 60%;
     border: 5px solid rgba(247, 209, 216, 0.95);
     border-radius: 10px;
-/*     margin: 30px; */
+    margin: 30px;
     /* margin-bottom: 0%; */
     padding: 10px;
     box-sizing: border-box;
