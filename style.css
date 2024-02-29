@@ -123,7 +123,6 @@ nav .fa{
 }
 
 /* for smaller screen device, put smaller font size */
-/* need to adjust back!! tengok cth code dr arpah */
 @media(max-width: 700px){
     .text-box{
         max-width: 50%;
