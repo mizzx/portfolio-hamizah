@@ -196,7 +196,18 @@ nav .fa{
 }
 /* ------------------- */
 
-@media (max-height: 400px) {
+@media (max-height: 800px) {
+    .text-box{
+        max-width: 50%;
+        height: auto;
+        color: white;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%); /* center of div */
+        text-align: center;
+        margin-top: 300px;
+    }
     .text-box h1{
         font-size: 40px;
         text-shadow: 3px 1px palevioletred;
